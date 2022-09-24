@@ -1,0 +1,101 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+%\usepackage{unicode-math}
+\usepackage[margin=0.8 in]{geometry}
+\usepackage{graphicx}
+\usepackage{amssymb,amssymb,bm}
+\usepackage{pgfgantt}
+\usepackage{float,algorithmic,algorithm,xcolor}
+\usepackage{setspace}
+
+
+%%%%%% prepared by Asif Hamid Bhat %%%%%%
+
+\begin{document}
+\chapter{Time schedule of activities using Gannt Chart}
+
+%%%%%%%%%%%%%
+%\begin{ganttchart}[
+%   vgrid={*{1}{gray, dotted}, *1{black, dashed}},
+%   bar label node/.append style={
+%     align=left,
+%     text width=width("Aim 2. Software verificationx")}
+%   ]{1}{36}
+%\gantttitle{Year 1}{12} \gantttitle{Year 2}{12} \gantttitle{Year 2}{12}\\
+%\ganttbar{Aim 1. Migration}{1}{8} \\
+%\ganttbar{Aim 2. Software verification}{6}{12} \\
+%\ganttbar{Aim 3. Hardware portability}{12}{18} \\
+%\ganttbar{Aim 4. Documentation}{8}{24}
+%\ganttset{link/.style={OliveGreen}}
+%\end{ganttchart}
+%
+
+\begin{ganttchart}[x unit=0.35cm,y unit title=0.75cm,
+y unit chart=0.75cm,
+bar/.append style={fill=red!50},
+%progress=today,
+%today=11,
+group/.append style={draw=black, fill=green!50},
+milestone/.append style={fill=orange}
+,progress=today,today=24]{1}{36}
+\gantttitle{Year 2020-21}{12}{0.2}\gantttitle{Year 2021-22}{12}{0.2}\gantttitle{Year 2022-23}{12}{0.2}\\
+\gantttitlelist{1,...,12}{1}\gantttitlelist{1,...,12}{1}\gantttitlelist{1,...,12}{1} \\
+%%%% 1111111
+\ganttgroup[progress=100]{\begin{tabular}[c]{@{}l@{}} Objective 0\\ Objective 1\end{tabular}}{1}{12} \\
+%\ganttbar{Course work}{1}{12} \\
+%\ganttlinkedbar{ANSYS Simulations}{12}{18}
+%\\
+%\ganttlinkedbar{Hardware Data}{18}{24} \ganttnewline
+%\ganttmilestone{Data collected}{24} \ganttnewline
+%
+%\ganttlink{elem0}{elem1}
+%%\ganttlink{elem1}{elem6}
+%\ganttlink{elem1}{elem2}
+%\\
+%%%% 111111
+\ganttgroup[progress=100]{Objective 1}{8}{18} \\
+\ganttbar{Task 1}{8}{16} \\
+\ganttmilestone{Task 2}{18} \ganttnewline
+
+%\ganttlink{elem2}{elem3}\\
+%%%% 22222
+\ganttgroup[progress=100]{Objective 2}{16}{21} \\
+\ganttbar{Task 3}{16}{18} \\
+\ganttlinkedbar{Task 4}{18}{20} \ganttnewline
+\ganttmilestone{Milestone 1}{21} \ganttnewline
+\ganttlink{elem3}{elem4} \\
+\ganttgroup[progress=14]{Objective 3}{24}{30} \\
+\ganttbar{Task 5}{24}{30} \\
+\ganttlinkedbar{Task 6}{26}{29} \ganttnewline
+\ganttmilestone{Milestone 2}{30} \ganttnewline
+\ganttbar{Final submit}{30}{36}
+\ganttlink{elem3}{elem4} \\
+%%%% 4444
+%\ganttgroup{Objective 4}{20}{36} \\
+%\ganttbar{Exploring hybrid approach}{20}{30} \\
+%\ganttlinkedbar{Training and testing}{30}{36} \ganttnewline
+%\ganttmilestone{Paper submission}{36} \ganttnewline
+
+\ganttlink{elem0}{elem1}
+\ganttlink{elem1}{elem2}
+\ganttlink{elem2}{elem3}
+\ganttlink{elem4}{elem5}
+\ganttlink{elem5}{elem6}
+\ganttlink{elem6}{elem7}
+\ganttlink{elem7}{elem8}
+\ganttlink{elem8}{elem9}
+\ganttlink{elem9}{elem10}
+\ganttlink{elem10}{elem11}
+\ganttlink{elem11}{elem12}
+%\ganttlink{elem12}{elem13}
+%%\ganttlink{elem13}{elem14}
+%%\ganttlink{elem14}{elem15}
+%%\ganttlink{elem15}{elem16}
+%%\ganttlink{elem15}{elem17}
+%\ganttlink{elem1}{elem6}
+%\ganttlink{elem2}{elem6}
+%\ganttlink{elem6}{elem10}
+\end{ganttchart}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
